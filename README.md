@@ -127,7 +127,14 @@ This way, we can keep the environment consistent while improving how the object 
 
 ## (Ex 2) Run a ComfyUI workflow programatically [Coding]
 
-To run a ComfyUI workflow programmatically (without using the graphical interface), you need to interact with the server through its HTTP API.
+## To run a ComfyUI workflow programmatically (without using the graphical interface), you need to interact with the server through its HTTP API.
+
+### Clone this repository
+
+```
+git clone https://github.com/sraffy758/homework.git
+cd homework
+```
 
 ---
 
