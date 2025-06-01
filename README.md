@@ -209,6 +209,8 @@ Seed: 4104968704
 Output image: ComfyUI/output/ComfyUI_00001_.png
 ```
 
+The generated image will be saved in the ComfyUI/output folder.
+
 #### Possible Improvement:
 
 Currently, the command remains blocked for the entire duration of the generation process.
