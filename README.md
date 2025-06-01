@@ -127,7 +127,7 @@ This way, we can keep the environment consistent while improving how the object 
 
 ## (Ex 2) Run a ComfyUI workflow programatically [Coding]
 
-## To run a ComfyUI workflow programmatically (without using the graphical interface), you need to interact with the server through its HTTP API.
+To run a ComfyUI workflow programmatically (without using the graphical interface), you need to interact with the server through its HTTP API.
 
 ### Clone this repository
 
@@ -172,7 +172,7 @@ python main.py --port 8188
 
 ### Call any ComfyUI workflow via a python command
 
-The workflow is save in the api.json file.
+The workflow is saved in the api.json file.
 
 1. Open a new terminal
 
