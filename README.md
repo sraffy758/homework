@@ -126,3 +126,17 @@ This way, we can keep the environment consistent while improving how the object 
 ---
 
 ## (Ex 2) Run a ComfyUI workflow programatically [Coding]
+
+To run a ComfyUI workflow programmatically (without using the graphical interface), you need to interact with the server through its HTTP API.
+
+First, you must download ComfyUI and the appropriate checkpoint model.
+
+```
+conda create comfy_venv python=3.10
+git clone https://github.com/comfyanonymous/ComfyUI.git
+cd Comfyui
+pip install -r requirements.txt
+python main.py
+```
+
+Then, start the ComfyUI server on port 8188.
