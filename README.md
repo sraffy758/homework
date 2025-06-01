@@ -151,7 +151,7 @@ https://huggingface.co/Comfy-Org/stable-diffusion-v1-5-archive/blob/main/v1-5-pr
 Then place it into:
 `Comfyui/models/checkpoint`
 
-4.Start the ComfyUI Server (Port 8188)
+4. Start the ComfyUI Server (Port 8188)
 
 ```
 python main.py --port 8188
