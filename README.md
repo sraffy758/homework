@@ -1,3 +1,5 @@
+## (Ex 1) Do a benchmark of Inpainting solutions
+
 The following inpainting methods were selected for evaluation based on their availability as open-source tools or their compatibility with integration pipelines such as ComfyUI:
 • SDXL Inpainting (SDXL model finetuned for inpainting tasks)
 • AlbedoXL + Foocus (patch-based adaptation for inpainting)
