@@ -129,14 +129,23 @@ This way, we can keep the environment consistent while improving how the object 
 
 To run a ComfyUI workflow programmatically (without using the graphical interface), you need to interact with the server through its HTTP API.
 
-First, you must download ComfyUI and the appropriate checkpoint model.
-
+1. Create and Activate a Virtual Environment
 ```
-conda create comfy_venv python=3.10
+conda create -n comfy_venv python=3.10
+conda activate comfy_venv
+```
+2. Clone the ComfyUI Repository and Install Requirements
+```
 git clone https://github.com/comfyanonymous/ComfyUI.git
 cd Comfyui
 pip install -r requirements.txt
-python main.py
 ```
+3. Download the model checkpoint from:
+https://huggingface.co/Comfy-Org/stable-diffusion-v1-5-archive/blob/main/v1-5-pruned-emaonly.safetensors
+Then place it into:
+```Comfyui/models/checkpoint```
 
-Then, start the ComfyUI server on port 8188.
+4️. Start the ComfyUI Server (Port 8188)
+```
+python main.py --port 8188
+```
