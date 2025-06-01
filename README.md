@@ -35,7 +35,7 @@ In our comparison, we considered the following criteria:
 -   Inference time (not deeply analyzed here, as all methods performed within ~30s on standard hardware)
 -   Integration capabilities (e.g., ease of use in ComfyUI)
 -   Adaptability (support for finetuning, LoRA training, compatibility with workflows)
--   Pricing model
+-   Pricing
 -   And most importantly, image quality (evaluated in a separate section).
 
 ---
