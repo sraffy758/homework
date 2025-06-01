@@ -95,8 +95,10 @@ While all these factors matter — integration, cost, and adaptability — the m
 
 -   **SDXL**-based models show weaker integration with the environment. While their visual quality is generally good, it tends to be inconsistent across generations.
 -   **Flux** models outperform SDXL models in terms of asset integration and offer superior asset quality. **Flux Fill Pro** appears to have the best prompt adherence among all models tested.
+-   **Global inpainting** provides better scale consistency and proportion coherence across the entire image, as it maintains the full context of the scene.
+-   **Localized inpainting** can potentially deliver higher quality assets in the target area, but results are more variable. The quality heavily depends on having sufficient context in the cropped region. If the cropped area is too small or lacks enough surrounding context, the generated content may appear disconnected or inconsistent with the rest of the image.
 
-Based on these observations, I would recommend choosing a Flux-based solution. Among the available options, **Flux Fill Dev** stands out as the most adaptable — it could be further improved through task-specific finetuning, making it a solid candidate for production.
+Based on these observations, I would recommend choosing a Flux-based solution. Among the available options, **Flux Fill Dev** with global inpainting stands out as the most adaptable — it could be further improved through task-specific finetuning, making it a solid candidate for production.
 
 ---
 
@@ -104,7 +106,7 @@ Based on these observations, I would recommend choosing a Flux-based solution. A
 
 Of course, this recommendation is based on a preliminary evaluation. A more comprehensive benchmark could include a larger number of generations with the use of quantitative performance metrics such as:
 
--   **CLIP Score** (prompt adherence)
+-   **CLIP Score** (Prompt Adherence)
 -   **LPIPS** (Learned Perceptual Image Patch Similarity)
 -   **NIQE** (Naturalness and perceptual quality)
 
