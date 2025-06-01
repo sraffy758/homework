@@ -104,7 +104,7 @@ Based on these observations, I would recommend choosing a Flux-based solution. A
 
 ### Further Steps
 
-Of course, this recommendation is based on a preliminary evaluation. A more comprehensive benchmark could include a larger number of generations with the use of quantitative performance metrics such as:
+A more comprehensive benchmark could include a larger number of generations — using the same seed for consistency — along with the use of quantitative performance metrics such as:
 
 -   **CLIP Score** (Prompt Adherence)
 -   **LPIPS** (Learned Perceptual Image Patch Similarity)
