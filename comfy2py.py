@@ -84,7 +84,7 @@ def main():
             break
         time.sleep(1)
 
-    print(f"Output image: outputs/{output_image}")
+    print(f"Output image: ComfyUI/output/{output_image}")
 
 
 if __name__ == "__main__":
