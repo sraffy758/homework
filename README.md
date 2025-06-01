@@ -211,7 +211,7 @@ Output image: ComfyUI/output/ComfyUI_00001_.png
 
 The generated image will be saved in the ComfyUI/output folder.
 
-#### Possible Improvement:
+#### Possible Improvements:
 
 Currently, the command remains blocked for the entire duration of the generation process.
 One potential improvement would be to implement a queuing system, allowing the script to handle multiple requests sequentially without blocking the command line.
