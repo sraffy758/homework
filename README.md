@@ -98,7 +98,7 @@ While all these factors matter — integration, cost, and adaptability — the m
 -   **Global inpainting** provides better scale consistency and proportion coherence across the entire image, as it maintains the full context of the scene.
 -   **Localized inpainting** can potentially deliver higher quality assets in the target area, but results are more variable. The quality heavily depends on having sufficient context in the cropped region. If the cropped area is too small or lacks enough surrounding context, the generated content may appear disconnected or inconsistent with the rest of the image.
 
-Based on these observations, I would recommend choosing a Flux-based solution. Among the available options, **Flux Fill Dev** with global inpainting stands out as the most adaptable — it could be further improved through task-specific finetuning, making it a solid candidate for production.
+Based on these observations, I would recommend choosing a Flux-based solution. Among the available options, **Flux Fill Dev** stands out as the most adaptable — it could be further improved through task-specific finetuning, making it a solid candidate for production. Regarding the inpainting strategy, there is room for optimization depending on the use case: while global inpainting ensures better scale and proportion coherence by preserving the full scene context, localized inpainting can yield higher quality results in the masked area — provided that enough surrounding context is included. Fine-tuning the balance between both approaches could lead to more consistent and visually coherent outputs.
 
 ---
 
