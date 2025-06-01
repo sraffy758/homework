@@ -80,7 +80,6 @@ def main():
         if prompt_id in result:
             outputs = result[prompt_id]["outputs"]
             output_image = outputs["9"]["images"][0]["filename"]
-
             break
         time.sleep(1)
 

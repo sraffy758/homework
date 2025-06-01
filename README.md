@@ -196,4 +196,7 @@ Here are the available command-line arguments:
 -   `--seed` _(int, optional)_:  
     Random seed for generation. If not provided, the script will generate a random one.
 
-#### Possible Improvements:
+#### Possible Improvement:
+
+Currently, the command remains blocked for the entire duration of the generation process.
+One potential improvement would be to implement a queuing system, allowing the script to handle multiple requests sequentially without blocking the command line.
