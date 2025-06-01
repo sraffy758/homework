@@ -76,7 +76,7 @@ While all these factors matter — integration, cost, and adaptability — the m
 
 ![Benchmark Results](images/benchmark1.png)
 
--   The **Flux** models offered the most convincing integration of the shiba inu, especially in terms of preserving the carpet's pattern and texture.
+-   The **Flux** models offered the most convincing integration of the shiba inu, especially in terms of preserving the carpet's pattern and texture. The output from Flux Fill Pro tends to have a plastic-like appearance, while the results from Flux Fill Dev appear more natural.
 -   With **SDXL**-based models, while the dog's positioning and proportions were generally accurate, the asset quality was noticeably lower compared to the Flux outputs.
 -   Regarding inpainting strategies, global inpainting provided better results in terms of scale consistency and lighting coherence across the image.
 
@@ -94,7 +94,7 @@ While all these factors matter — integration, cost, and adaptability — the m
 ### Conclusion
 
 -   **SDXL**-based models show weaker integration with the environment. While their visual quality is generally good, it tends to be inconsistent across generations.
--   **Flux** models outperform SDXL models in terms of asset integration and offer superior asset quality. **Flux Fill Pro** appears to have the best prompt adherence among all models tested.
+-   **Flux** models outperform SDXL models in terms of asset integration and offer superior asset quality. **Flux Fill Pro** appears to have the best prompt adherence among all models tested, but the output tends to have a plastic-like effect.
 -   **Global inpainting** provides better scale consistency and proportion coherence across the entire image, as it maintains the full context of the scene.
 -   **Localized inpainting** can potentially deliver higher quality assets in the target area, but results are more variable. The quality heavily depends on having sufficient context in the cropped region. If the cropped area is too small or lacks enough surrounding context, the generated content may appear disconnected or inconsistent with the rest of the image.
 
