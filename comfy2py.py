@@ -34,7 +34,7 @@ def main():
     parser.add_argument(
         "--seed",
         type=int,
-        help="Seed for generation (if not provided, will use seed from api.json or generate random)",
+        help="Seed for generation (if not provided, will generate random)",
     )
 
     # Parse arguments

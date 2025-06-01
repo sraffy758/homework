@@ -165,7 +165,7 @@ python main.py --port 8188
 
 ### Call any ComfyUI workflow via a python command
 
-The workflow is save un the api.json file.
+The workflow is save in the api.json file.
 
 1. Open a new terminal
 
@@ -187,4 +187,4 @@ Here are the available command-line arguments:
     Number of diffusion steps to run.
 
 -   `--seed` _(int, optional)_:  
-    Random seed for generation. If not provided, the script will use the seed from `api.json` or generate a random one.
+    Random seed for generation. If not provided, the script will generate a random one.
