@@ -1,5 +1,5 @@
-# Use Python 3.10 as base image
-FROM python:3.10-slim
+# Use PyTorch base image that supports both CUDA and MPS
+FROM pytorch/pytorch:latest
 
 # Set working directory
 WORKDIR /app
