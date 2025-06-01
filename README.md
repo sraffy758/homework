@@ -153,7 +153,7 @@ pip install -r requirements.txt
 https://huggingface.co/Comfy-Org/stable-diffusion-v1-5-archive/blob/main/v1-5-pruned-emaonly.safetensors
 
 Then place it into:
-`Comfyui/models/checkpoint`
+`Comfyui/models/checkpoints`
 
 4. Start the ComfyUI Server (Port 8188)
 
