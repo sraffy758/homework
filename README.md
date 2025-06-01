@@ -42,13 +42,13 @@ In our comparison, we considered the following criteria:
 
 ### Comparison Table
 
-| Name                | Integration | Adaptability | Note   |
-| ------------------- | ----------- | ------------ | ------ |
-| SDXL inpainting     | Open-Source | Comfy        | Medium |
-| AlbedoXL + Foocus   | Open-Source | Comfy        | Good   |
-| AlbedoXL + Brushnet | Open-Source | Comfy        | Good   |
-| Flux-fill dev       | Licence +   | Comfy        | Medium |
-| Flux-fill pro       | API ++      | API          | Bad    |
+| Methods             | Pricing     | Integration | Adaptability |
+| ------------------- | ----------- | ----------- | ------------ |
+| SDXL inpainting     | Open-Source | Comfy       | Medium       |
+| AlbedoXL + Foocus   | Open-Source | Comfy       | Good         |
+| AlbedoXL + Brushnet | Open-Source | Comfy       | Good         |
+| Flux-fill dev       | Licence +   | Comfy       | Medium       |
+| Flux-fill pro       | API ++      | API         | Bad          |
 
 ---
 
@@ -66,7 +66,7 @@ Using these methods within ComfyUI provides greater flexibility and control over
 -   **Flux-Fill Dev** requires a license.
 -   The other solutions are fully open-source and free to use.
 
-While all these factors matter — integration, cost, and adaptability — the most critical criterion remains image quality, which is where Presti demonstrates its strongest advantage.
+While all these factors matter — integration, cost, and adaptability — the most critical criterion remains image quality, which is where your company demonstrates its strongest advantage.
 
 ---
 
@@ -74,11 +74,15 @@ While all these factors matter — integration, cost, and adaptability — the m
 
 #### Use Case 1 – Shiba Inu on a Carpet
 
+![Benchmark Results](images/benchmark1.png)
+
 -   The **Flux** models offered the most convincing integration of the shiba inu, especially in terms of preserving the carpet's pattern and texture.
 -   With **SDXL**-based models, while the dog's positioning and proportions were generally accurate, the asset quality was noticeably lower compared to the Flux outputs.
 -   Regarding inpainting strategies, global inpainting provided better results in terms of scale consistency and lighting coherence across the image.
 
 #### Use Case 2 – Red Plaid on a Sofa
+
+![Benchmark Results](images/benchmark2.png)
 
 -   **SDXL Inpaint** and **BrushNet** struggled to integrate the plaid naturally into the scene.
 -   **Foocus** delivered better prompt adherence — successfully generating a casually draped plaid, as requested — but the asset quality varied significantly between runs.
@@ -119,4 +123,4 @@ This way, we can keep the environment consistent while improving how the object 
 
 ---
 
-This version improves the readability and structure of your README for a better understanding and comparison of inpainting solutions.
+## (Ex 2) Run a ComfyUI workflow programatically [Coding]
