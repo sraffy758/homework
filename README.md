@@ -127,7 +127,7 @@ This way, we can keep the environment consistent while improving how the object 
 
 ## (Ex 2) Run a ComfyUI workflow programatically [Coding]
 
-To run a ComfyUI workflow programmatically (without using the graphical interface), you need to interact with the server through its HTTP API.
+To run a ComfyUI workflow programmatically (without using the graphical interface), you need to interact with Comfy through its HTTP API.
 
 ### Clone this repository
 
@@ -195,6 +195,18 @@ Here are the available command-line arguments:
 
 -   `--seed` _(int, optional)_:  
     Random seed for generation. If not provided, the script will generate a random one.
+
+This command will display an output similar to:
+
+```
+Parameters:
+Prompt: your prompt here
+Negative Prompt: your negative prompt here
+Steps: 50
+Seed: 4104968704
+--------------------------------
+Output image: ComfyUI/output/ComfyUI_00001_.png
+```
 
 #### Possible Improvement:
 
