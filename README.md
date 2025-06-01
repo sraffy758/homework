@@ -129,6 +129,10 @@ This way, we can keep the environment consistent while improving how the object 
 
 To run a ComfyUI workflow programmatically (without using the graphical interface), you need to interact with the server through its HTTP API.
 
+---
+
+### Launch ComfyUI Server
+
 1. Create and Activate a Virtual Environment
 
 ```
@@ -156,3 +160,31 @@ Then place it into:
 ```
 python main.py --port 8188
 ```
+
+---
+
+### Call any ComfyUI workflow via a python command
+
+The workflow is save un the api.json file.
+
+1. Open a new terminal
+
+2. Call the Comfyui Workflow with :
+
+```
+python comfy2py.py --prompt="your prompt here" --neg-prompt="your negative prompt here" --steps=50
+```
+
+Here are the available command-line arguments:
+
+-   `--prompt` _(str, required)_:  
+    The main prompt for generation.
+
+-   `--neg-prompt` _(str, optional)_:  
+    The negative prompt (to avoid certain content).
+
+-   `--steps` _(int, default: 50)_:  
+    Number of diffusion steps to run.
+
+-   `--seed` _(int, optional)_:  
+    Random seed for generation. If not provided, the script will use the seed from `api.json` or generate a random one.
