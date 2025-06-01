@@ -1,49 +1,48 @@
-## (Ex 1) Benchmark des solutions d’Inpainting
+## (Ex 1) Do a benchmark of Inpainting solutions
 
-### Méthodes évaluées
+### Methods Evaluated
 
-Les méthodes suivantes ont été sélectionnées pour leur disponibilité open-source ou leur compatibilité avec des pipelines comme ComfyUI :
+The following inpainting methods were selected for evaluation based on their availability as open-source tools or their compatibility with integration pipelines such as ComfyUI:
 
--   **SDXL Inpainting** : modèle SDXL spécialisé pour l’inpainting
--   **AlbedoXL + Foocus** : adaptation patch-based pour l’inpainting
--   **AlbedoXL + BrushNet** : architecture dual-branch pour l’inpainting
--   **Flux-Fill Dev** : variante Flux Dev spécialisée pour l’inpainting
--   **Flux-Fill Pro** : variante Flux Pro spécialisée pour l’inpainting
-
----
-
-### Cas de test
-
-Pour comparer ces approches, deux cas d’usage ont été utilisés :
-
--   Générer un shiba inu sur un tapis dans un salon
--   Ajouter un plaid rouge sur un canapé
-
-Pour chaque cas :
-
--   Attention portée à la qualité de l’objet généré
--   Cohérence de l’image (motifs du tapis, lumière, ombres)
-
-Chaque méthode a été testée avec deux stratégies :
-
--   **Inpainting global** : sur l’image entière
--   **Inpainting localisé** : sur une région recadrée et upscalée autour du masque
+-   **SDXL Inpainting** (SDXL model finetuned for inpainting tasks)
+-   **AlbedoXL + Foocus** (patch-based adaptation for inpainting)
+-   **AlbedoXL + BrushNet** (dual-branch architecture tailored for inpainting)
+-   **Flux-Fill Dev** (Flux Dev variant finetuned for inpainting)
+-   **Flux-Fill Pro** (Flux Pro variant finetuned for inpainting)
 
 ---
 
-### Critères de comparaison
+### Test Cases
 
--   Temps d’inférence (tous < 30s sur hardware standard)
--   Capacité d’intégration (ex : facilité d’utilisation dans ComfyUI)
--   Adaptabilité (finetuning, LoRA, compatibilité workflows)
--   Modèle de tarification
--   Qualité d’image (détaillée plus loin)
+To evaluate and compare these approaches, we used two consistent test cases:
+
+-   Generating a shiba inu on a carpet in a living room
+-   Adding a red throw blanket on a sofa
+
+For both use cases, we paid close attention to object quality, image coherence (e.g., carpet pattern consistency, lighting, and shadows).
+
+Each method was tested with two inpainting strategies:
+
+-   **Global inpainting** on the full image.
+-   **Localized inpainting** on a cropped, upscaled region surrounding the mask, giving the model more context to work with.
 
 ---
 
-### Tableau comparatif
+### Comparison Criteria
 
-| Nom                 | Intégration | Adaptabilité | Note   |
+In our comparison, we considered the following criteria:
+
+-   Inference time (not deeply analyzed here, as all methods performed within ~30s on standard hardware)
+-   Integration capabilities (e.g., ease of use in ComfyUI)
+-   Adaptability (support for finetuning, LoRA training, compatibility with workflows)
+-   Pricing model
+-   And most importantly, image quality (evaluated in a separate section).
+
+---
+
+### Comparison Table
+
+| Name                | Integration | Adaptability | Note   |
 | ------------------- | ----------- | ------------ | ------ |
 | SDXL inpainting     | Open-Source | Comfy        | Medium |
 | AlbedoXL + Foocus   | Open-Source | Comfy        | Good   |
@@ -53,63 +52,71 @@ Chaque méthode a été testée avec deux stratégies :
 
 ---
 
-### Résumé des solutions
+### Summary of Solutions
 
--   **ComfyUI** offre flexibilité et contrôle sur la génération.
--   **Foocus** et **BrushNet** sont compatibles avec tout modèle SDXL standard.
--   **SDXL Inpainting** et **Flux-Fill Dev** nécessitent des modèles dédiés mais sont extensibles via LoRA.
--   **Flux-Fill Pro** fonctionne uniquement via API, avec peu de contrôle.
+Using these methods within ComfyUI provides greater flexibility and control over the generation process.
 
-#### Coût :
+-   **Foocus** and **BrushNet** offer compatibility with any standard SDXL model, making them highly adaptable across different checkpoints.
+-   **SDXL Inpainting** and **Flux-Fill Dev** require dedicated inpainting models but can still be extended via LoRA finetuning.
+-   **Flux-Fill Pro** offers limited control, as it operates exclusively through API calls.
 
--   **Flux-Fill Pro** : le plus cher, accès API externe requis.
--   **Flux-Fill Dev** : nécessite une licence.
--   Les autres : open-source et gratuits.
+#### Cost Perspective:
+
+-   **Flux-Fill Pro** is the most expensive solution and requires external API access.
+-   **Flux-Fill Dev** requires a license.
+-   The other solutions are fully open-source and free to use.
+
+While all these factors matter — integration, cost, and adaptability — the most critical criterion remains image quality, which is where Presti demonstrates its strongest advantage.
 
 ---
 
-### Résultats par cas d’usage
+### Results by Use Case
 
-#### 1. Shiba Inu sur un tapis
+#### Use Case 1 – Shiba Inu on a Carpet
 
--   **Flux** : meilleure intégration du shiba, respect du motif du tapis.
--   **SDXL** : positionnement correct, mais qualité inférieure.
--   **Inpainting global** : meilleure cohérence d’échelle et de lumière.
+-   The **Flux** models offered the most convincing integration of the shiba inu, especially in terms of preserving the carpet's pattern and texture.
+-   With **SDXL**-based models, while the dog's positioning and proportions were generally accurate, the asset quality was noticeably lower compared to the Flux outputs.
+-   Regarding inpainting strategies, global inpainting provided better results in terms of scale consistency and lighting coherence across the image.
 
-#### 2. Plaid rouge sur un canapé
+#### Use Case 2 – Red Plaid on a Sofa
 
--   **SDXL Inpaint** et **BrushNet** : difficulté à intégrer le plaid naturellement.
--   **Foocus** : bonne prise en compte du prompt, mais qualité variable.
--   **Flux Fill Pro** : bonne qualité d’image, prompt respecté.
--   **Flux Fill Dev** : meilleure intégration et qualité, mais prompt moins respecté (plaid toujours plié).
+-   **SDXL Inpaint** and **BrushNet** struggled to integrate the plaid naturally into the scene.
+-   **Foocus** delivered better prompt adherence — successfully generating a casually draped plaid, as requested — but the asset quality varied significantly between runs.
+-   **Flux Fill Pro** produced good image quality and respected the prompt relatively well.
+-   However, **Flux Fill Dev** provided the most seamless integration and the highest asset quality, although its prompt adherence was weaker: the plaid appeared neatly folded in all generations, regardless of the instruction.
 
 ---
 
 ### Conclusion
 
--   Les modèles SDXL sont moins bons pour l’intégration à l’environnement, qualité inégale.
--   Les modèles Flux sont meilleurs pour l’intégration et la qualité des objets.
--   **Flux Fill Pro** : meilleure prise en compte du prompt.
--   **Flux Fill Dev** : le plus adaptable, améliorable par finetuning, bon candidat pour la production.
+-   **SDXL**-based models show weaker integration with the environment. While their visual quality is generally good, it tends to be inconsistent across generations.
+-   **Flux** models outperform SDXL models in terms of asset integration and offer superior asset quality. **Flux Fill Pro** appears to have the best prompt adherence among all models tested.
+
+Based on these observations, I would recommend choosing a Flux-based solution. Among the available options, **Flux Fill Dev** stands out as the most adaptable — it could be further improved through task-specific finetuning, making it a solid candidate for production.
 
 ---
 
-### Pour aller plus loin
+### Further Steps
 
--   Évaluation plus large possible avec :
-    -   Plus de générations
-    -   Métriques quantitatives : CLIP Score, LPIPS, NIQE
-    -   A/B testing humain
+Of course, this recommendation is based on a preliminary evaluation. A more comprehensive benchmark could include a larger number of generations with the use of quantitative performance metrics such as:
 
-#### Améliorations possibles :
+-   **CLIP Score** (prompt adherence)
+-   **LPIPS** (Learned Perceptual Image Patch Similarity)
+-   **NIQE** (Naturalness and perceptual quality)
 
--   Tester des modèles avancés (in-context inpainting, InstructPix2Pix)
--   Améliorer la qualité via relighting et upscaling
--   Pour garder le fond original :
-    1. Segmenter l’objet généré
-    2. Le replacer sur l’image d’origine
-    3. Appliquer un relighting pour l’intégration
+Additionally, A/B testing could be used to support the selection process through direct human preference comparisons.
+
+#### Possible Improvements:
+
+-   We could try using more advanced models like in-context inpainting or InstructPix2Pix, which allow better control by following text instructions or using more context from the image.
+-   To improve image quality, especially in terms of lighting and sharpness, we can apply relighting (adjusting the light in the image) and upscaling (to increase resolution and detail).
+-   If we want to keep the original background unchanged, one solution is to:
+    1. Isolate the generated object using a segmentation method
+    2. Place it back on the original image
+    3. Apply relighting to match shadows and lighting for a more natural result
+
+This way, we can keep the environment consistent while improving how the object fits into the scene.
 
 ---
 
-Cette version améliore la lisibilité et la structure de ton README pour une meilleure compréhension et comparaison des solutions d’inpainting.
+This version improves the readability and structure of your README for a better understanding and comparison of inpainting solutions.
