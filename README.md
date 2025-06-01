@@ -213,3 +213,4 @@ Output image: ComfyUI/output/ComfyUI_00001_.png
 
 Currently, the command remains blocked for the entire duration of the generation process.
 One potential improvement would be to implement a queuing system, allowing the script to handle multiple requests sequentially without blocking the command line.
+Additionally, it could be useful to add an option for saving the generated images to a different location, such as a cloud storage service (e.g., AWS S3, Google Cloud Storage) or a user-defined output folder, to better support large-scale or distributed use cases.
