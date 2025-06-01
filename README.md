@@ -87,7 +87,7 @@ While all these factors matter — integration, cost, and adaptability — the m
 -   **SDXL Inpaint** and **BrushNet** struggled to integrate the plaid naturally into the scene.
 -   **Foocus** delivered better prompt adherence — successfully generating a casually draped plaid, as requested — but the asset quality varied significantly between runs.
 -   **Flux Fill Pro** produced good image quality and respected the prompt relatively well.
--   However, **Flux Fill Dev** provided the most seamless integration and the highest asset quality, although its prompt adherence was weaker: the plaid appeared neatly folded in all generations, regardless of the instruction.
+-   **Flux Fill Dev** provided the most seamless integration and the highest asset quality, although its prompt adherence was weaker: the plaid appeared neatly folded in all generations, regardless of the instruction.
 
 ---
 
