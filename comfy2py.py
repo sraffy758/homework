@@ -67,6 +67,7 @@ def main():
     print(f"Seed: {workflow['3']['inputs']['seed']}")
     print("--------------------------------")
 
+    # Send the workflow to ComfyUI
     response = requests.post(
         f"{COMFY_URL}/prompt", json={"prompt": workflow, "client_id": "script_runner"}
     )
