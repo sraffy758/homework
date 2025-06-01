@@ -42,3 +42,6 @@ ENV/
 
 # Git
 .gitkeep
+
+# Ignore .DS_Store files
+.DS_Store
