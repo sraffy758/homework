@@ -114,6 +114,7 @@ Additionally, A/B testing could be used to support the selection process through
 
 #### Possible Improvements:
 
+-   We could use a large language model (LLM) to enhance the prompts dynamically — ensuring clearer, more effective instructions tailored to the generation task.
 -   We could try using more advanced models like in-context inpainting or InstructPix2Pix, which allow better control by following text instructions or using more context from the image.
 -   To improve image quality, especially in terms of lighting and sharpness, we can apply relighting (adjusting the light in the image) and upscaling (to increase resolution and detail).
 -   If we want to keep the original background unchanged, one solution is to:
